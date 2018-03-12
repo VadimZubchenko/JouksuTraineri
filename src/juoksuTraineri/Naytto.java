@@ -2,6 +2,7 @@ package juoksuTraineri;
 
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author vadimzu
