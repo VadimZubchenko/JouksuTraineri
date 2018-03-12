@@ -1,30 +1,37 @@
 package juoksuTraineri;
+package labra_projekti;
 
 /**
  *
  * @author heidi
  */
 public class Askelmittari {
+    private int kav = 150, holk = 220, juok = 290;
     
     private double pkavely = 0.413;
     private double pholkka = 0.435;
     private double pjuoksu = 0.464;
+    
 
-    private int korkeus, valinta;
+    private int korkeus, valinta, valinta2;
     private double askel;
     
     public Askelmittari (){
          
     }
     
-    public void setAskelmittari (int uusiPituus) {
+    public void setKorkeus (int uusiPituus) {
         korkeus = uusiPituus;
     }
     public void setValinta (int uusiValinta) {
         valinta = uusiValinta;
+        
+    }
+    public void setAskel (int uusiAskel) {
+        valinta2 = uusiAskel;
     }
     
-    public double getAskelmittari () {
+    public double getKorkeus () {
         return korkeus;
     }
     public double getValinta () {
@@ -36,11 +43,15 @@ public class Askelmittari {
               return pjuoksu;
           }
     }
-            
-    public void setAskel (double uusiAskel){
-          askel = uusiAskel;  
+    
+    public int getAskel () {
+        if (valinta2 == 1) {
+            return kav;
+        } else if (valinta2 == 2) {
+            return holk;
+        }else {
+            return juok; 
+        }
     }
-    public double getAskel (){
-        return askel;
-    }
+    
 }
