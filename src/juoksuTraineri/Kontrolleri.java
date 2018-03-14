@@ -11,6 +11,14 @@ public class Kontrolleri {
     // kapseloidut ominaisuudet (V, M)
     private Naytto naytto;
     private SykeMittari mittari;
+    private ReittiOpas reitti = new ReittiOpas ();
+    private Askelmittari korkeus = new Askelmittari ();
+    
+    
+    private int pituus, valinta, time; //Heidin
+    private int nopeus;
+    private double matka1 = 0;
+    DecimalFormat precision = new DecimalFormat( "0.00" );  //heidi
 
     // metodi luo tarvittavat MVC-sovelluksen komponentit ja 
     // käynnistää MVC-sovelluksen.
@@ -33,14 +41,24 @@ public class Kontrolleri {
     }
 
     public void start(int nopeus) {
+        
         // pyydetään näyttöä kysymään käyttäjältä haluttu jouksuaika
         String vastaus = naytto.kysyTieto("Kuinka kauan juostaan?");
         Double aika = Double.parseDouble(vastaus);
+        
+        String vastaus1 = JOptionPane.showInputDialog ("Anna pituutesi: ");
+        pituus = Integer.parseInt(vastaus1); //heidi
+        
+        korkeus.setKorkeus(pituus); //heidi
+        
+        
         // annetaan reitin olot
-        String reittiOlo = naytto.kysyTieto("pelto: 1, metsä 2, mäkeä: 3");
-        int olo = Integer.parseInt(reittiOlo);
+        String reittiMaisema = naytto.kysyTieto("Millaisella alueella liikut?\n" 
+                + "1. Kaupunki\n, 2. Metsä\n, 3. Hiekkatiet/peltoalue");
+        int maisema = Integer.parseInt(reittiMaisema);
         // siirretään tietoa mittarille
-        mittari.setOlo(olo);
+        reitti.setMaisema(maisema);
+        
         // while-tostorakenteella, joka simuloi kelloa
         int vaihe = 0;
         while (aika > 0) {
