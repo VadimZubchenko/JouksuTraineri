@@ -1,5 +1,4 @@
 package juoksuTraineri;
-package labra_projekti;
 
 /**
  *
@@ -14,7 +13,7 @@ public class Askelmittari {
     
 
     private int korkeus, valinta, valinta2;
-    private double askel;
+    private double askel, askelpituus;
     
     public Askelmittari (){
          
@@ -53,5 +52,13 @@ public class Askelmittari {
             return juok; 
         }
     }
+    //Askeleiden pituus
+    public double getAskelpituus () {
+        askelpituus = getKorkeus() * getValinta() / 100;
+        return askelpituus;
     
+        }
 }
+
+    
+
