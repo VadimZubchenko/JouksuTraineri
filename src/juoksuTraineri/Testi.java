@@ -25,7 +25,7 @@ public class Testi {
         vastaus1 = JOptionPane.showInputDialog ("Anna pituutesi: ");
         pituus = Integer.parseInt(vastaus1);
         
-        korkeus.setAskelmittari(pituus);
+        korkeus.setAskel(pituus);
         
         vastaus2 = JOptionPane.showInputDialog ("Mikä on liikkumistapa? \n"
                 + "1. kävellään\n"
@@ -35,12 +35,12 @@ public class Testi {
         
         korkeus.setValinta(valinta);
         
-        korkeus.setAskel(korkeus.getAskelmittari()
+        korkeus.setAskel(korkeus.getAskel()
                         * korkeus.getValinta());
         
         JOptionPane.showMessageDialog(null, 
                 "Askelpituutesi on:"
-                + precision.format(korkeus.getAskelmittari()
+                + precision.format(korkeus.getAskel()
                         * korkeus.getValinta()));
         
         reitti.suunta();

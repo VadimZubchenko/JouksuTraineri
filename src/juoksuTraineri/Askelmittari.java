@@ -5,14 +5,14 @@ package juoksuTraineri;
  * @author heidi
  */
 public class Askelmittari {
-    private int kav = 150, holk = 220, juok = 290;
+    private double kav = 150, holk = 220, juok = 290;
     
     private double pkavely = 0.413;
     private double pholkka = 0.435;
     private double pjuoksu = 0.464;
     
 
-    private int korkeus, valinta, valinta2;
+    private double korkeus, valinta, valinta2;
     private double askel, askelpituus;
     
     public Askelmittari (){
@@ -26,13 +26,14 @@ public class Askelmittari {
         valinta = uusiValinta;
         
     }
-    public void setAskel (int uusiAskel) {
+    public void setAskel (double uusiAskel) {
         valinta2 = uusiAskel;
     }
     
     public double getKorkeus () {
         return korkeus;
     }
+    
     public double getValinta () {
         if (valinta == 1) {
             return pkavely;
@@ -43,7 +44,7 @@ public class Askelmittari {
           }
     }
     
-    public int getAskel () {
+    public double getAskel () {
         if (valinta2 == 1) {
             return kav;
         } else if (valinta2 == 2) {

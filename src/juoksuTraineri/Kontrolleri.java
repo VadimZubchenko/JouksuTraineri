@@ -6,6 +6,9 @@ package juoksuTraineri;
  *
  * @author vadimzu
  */
+import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
+
 public class Kontrolleri {
 
     // kapseloidut ominaisuudet (V, M)
@@ -57,7 +60,7 @@ public class Kontrolleri {
                 + "1. Kaupunki\n, 2. Metsä\n, 3. Hiekkatiet/peltoalue");
         int maisema = Integer.parseInt(reittiMaisema);
         // siirretään tietoa mittarille
-        reitti.setMaisema(maisema);
+        //reitti.setMaisema(maisema);
         
         // while-tostorakenteella, joka simuloi kelloa
         int vaihe = 0;
