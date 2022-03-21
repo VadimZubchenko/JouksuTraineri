@@ -17,10 +17,8 @@ public class Kontrolleri {
     private ReittiOpas reitti;
     private Askelmittari korkeus;
     
-    
-    
-    private int pituus, valinta, time; //Heidin
-    private int nopeus;
+    private int pituus = 0, valinta = 0, time = 0; //Heidin
+    private int nopeus = 0;
     private double matka1 = 0;
     
     DecimalFormat precision = new DecimalFormat( "0.00" );  //heidi
