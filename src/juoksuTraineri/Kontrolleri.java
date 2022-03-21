@@ -21,6 +21,7 @@ public class Kontrolleri {
     private int pituus, valinta, time; //Heidin
     private int nopeus;
     private double matka1 = 0;
+    
     DecimalFormat precision = new DecimalFormat( "0.00" );  //heidi
 
     // metodi luo tarvittavat MVC-sovelluksen komponentit ja 
