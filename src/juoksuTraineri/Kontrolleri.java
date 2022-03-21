@@ -14,8 +14,9 @@ public class Kontrolleri {
     // kapseloidut ominaisuudet (V, M)
     private Naytto naytto;
     private SykeMittari mittari;
-    private ReittiOpas reitti = new ReittiOpas ();
-    private Askelmittari korkeus = new Askelmittari ();
+    private ReittiOpas reitti;
+    private Askelmittari korkeus;
+    
     
     
     private int pituus, valinta, time; //Heidin
@@ -32,9 +33,11 @@ public class Kontrolleri {
         // näyttöä esittämään aloitusnäytön.
 
         // luodaan sovelluksen tarvitsemat muut komponentit: M, V.
-        mittari = new SykeMittari(); // model Sykemittari
         naytto = new Naytto();       // View
-
+        mittari = new SykeMittari(); // model Sykemittari
+        reitti = new ReittiOpas();
+        korkeus = new Askelmittari();
+        
         // välitetään näytölle tieto sovelluksen kontrollerista eli
         // tämä komponentti itse (this).
         naytto.rekisteroiOhjain(this);
@@ -55,13 +58,15 @@ public class Kontrolleri {
         
         korkeus.setKorkeus(pituus); //heidi
         
-        
         // annetaan reitin olot
         String reittiMaisema = naytto.kysyTieto("Millaisella alueella liikut?\n" 
-                + "1. Kaupunki\n, 2. Metsä\n, 3. Hiekkatiet/peltoalue");
+                + "1. Kaupunki\n "
+                + "2. Metsä\n"
+                + "3. Hiekkatiet/peltoalue");
+        
         int maisema = Integer.parseInt(reittiMaisema);
         // siirretään tietoa mittarille
-        //reitti.setMaisema(maisema);
+        mittari.setOlo(maisema);
         
         // while-tostorakenteella, joka simuloi kelloa
         int vaihe = 0;

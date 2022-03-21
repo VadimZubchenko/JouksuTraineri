@@ -17,7 +17,7 @@ public class SykeAnturi {
     }
     // getterin luo random syke
     public int getAnturi() {
-        int syke = (int) (Math.random() * (max - min + 1) + min);
+        int syke = (int) (Math.random() * (max + 1 - min) + min);
         return syke;
     }
 
