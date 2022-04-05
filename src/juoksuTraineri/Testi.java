@@ -25,7 +25,7 @@ public class Testi {
         vastaus1 = JOptionPane.showInputDialog ("Anna pituutesi: ");
         pituus = Integer.parseInt(vastaus1);
         
-        korkeus.setAskel(pituus);
+        korkeus.setKorkeus(pituus);
         
         vastaus2 = JOptionPane.showInputDialog ("Mikä on liikkumistapa? \n"
                 + "1. kävellään\n"

@@ -19,7 +19,7 @@ public class Naytto {
         // näytetään käyttäjälle päävalikko
         valintaStr = JOptionPane.showInputDialog(null,
                 "Valitse toiminto (1-4) seuraavista: \n"
-                + "1: Nopea kävely \n"
+                + "1: Kävely \n"
                 + "2: Hölkä \n"
                 + "3: Jouksu \n"
                 + "4: lopetus \n"
